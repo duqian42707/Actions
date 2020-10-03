@@ -17,11 +17,11 @@ do
       new_image="$INPUT_NAMESPACE/${arr[1]}"
     fi
     echo "-------------[docker pull ${old_image}]-------------"
-    docker pull ${old_image}
+    docker pull "${old_image}"
     echo "-------------[docker tag ${old_image} ${new_image}]-------------"
-    docker tag ${old_image} ${new_image}
+    docker tag "${old_image}" "${new_image}"
     echo "-------------[docker push ${new_image}]-------------"
-    docker push ${new_image}
+    docker push "${new_image}"
 done
 
 
