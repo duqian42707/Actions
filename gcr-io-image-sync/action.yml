@@ -1,0 +1,26 @@
+name: gcr.io image sync
+description: An action for gcr.io image Sync
+author: duqian42707
+branding:
+  color: blue
+  icon: code
+inputs:
+  images:
+    description: 'Image list to sync. One image per row.'
+    required: true
+  username:
+    description: 'Username used to login docker registry'
+    required: true
+  password:
+    description: 'Password used to login docker registry'
+    required: true
+  namespace:
+    description: 'Namespace of docker images'
+    required: true
+  registry:
+    description: 'Docker registry server address'
+    required: false
+    default: ''
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
