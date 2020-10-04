@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: sync
-      uses: duqian42707/actions/gcr-io-image-sync@master
+      uses: duqian42707/actions/gcr-io-image-sync@main
       with:
         images: |
           k8s.gcr.io/kube-controller-manager:v1.18.8
