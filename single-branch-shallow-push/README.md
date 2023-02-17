@@ -16,7 +16,7 @@ jobs:
           ref: 'gh-pages'
           fetch-depth: 1
       - name: Deploy to Gitee Pages
-        uses: duqian42707/actions/single-branch-shallow-push@master
+        uses: duqian42707/actions/single-branch-shallow-push@main
         with:
           target_repo_url: git@gitee.com:dq07/blog.git
           ssh_private_key: ${{ secrets.GITEE_SSH_PRIVATE_KEY }}
