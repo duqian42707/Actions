@@ -1,0 +1,19 @@
+name: "Single Branch shallow-push"
+description: "Mirror a branch of a repository to another repository on GitHub, GitLab, Gitee, etc."
+branding:
+  icon: "archive"
+  color: "blue"
+inputs:
+  target_repo_url:
+    description: "Target url"
+    required: true
+  ssh_private_key:
+    description: "SSH private key for ssh connection to the target repository"
+    required: false
+  ssh_username:
+    description: "Username for ssh connection"
+    required: false
+    default: "git"
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
