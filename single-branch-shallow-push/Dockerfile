@@ -12,4 +12,4 @@ RUN apk update && apk upgrade && \
     chmod +x /mirror.sh
 
 
-ENTRYPOINT ["sh","/mirror.sh"]
+ENTRYPOINT ["/mirror.sh"]
