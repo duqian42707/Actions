@@ -9,7 +9,10 @@ RUN apk update && apk upgrade && \
     git lfs install && \
     chown root /setup-ssh.sh && \
     chown root /cleanup.sh && \
-    chown root /mirror.sh
+    chown root /mirror.sh && \
+    chmod +x /setup-ssh.sh && \
+    chmod +x /cleanup.sh && \
+    chmod +x /mirror.sh
 
 
 ENTRYPOINT ["/mirror.sh"]
