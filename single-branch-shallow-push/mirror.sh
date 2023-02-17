@@ -7,6 +7,9 @@ ls -alh
 export GIT_SSH_COMMAND="ssh -v -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no -l $INPUT_SSH_USERNAME"
 
 git config --global --add safe.directory /github/workspace
+git config --global user.name "Github Actions"
+git config --global user.email "duqian42707@163.com"
+
 branch_name=$(git symbolic-ref --short -q HEAD)
 message=$(git log --format=%B -n 1)
 git checkout --orphan e3a3bcbf11db4c5e9199e81e21e3d7cf

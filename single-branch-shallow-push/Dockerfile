@@ -1,4 +1,4 @@
-FROM alpine:3.10
+FROM alpine:latest
 
 COPY setup-ssh.sh /setup-ssh.sh
 COPY mirror.sh /mirror.sh
