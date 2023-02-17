@@ -7,12 +7,9 @@ COPY cleanup.sh /cleanup.sh
 RUN apk update && apk upgrade && \
     apk add --no-cache git openssh git-lfs && \
     git lfs install && \
-    chown root /setup-ssh.sh && \
-    chown root /cleanup.sh && \
-    chown root /mirror.sh && \
     chmod +x /setup-ssh.sh && \
     chmod +x /cleanup.sh && \
     chmod +x /mirror.sh
 
 
-ENTRYPOINT ["/mirror.sh"]
+ENTRYPOINT ["sh","/mirror.sh"]
