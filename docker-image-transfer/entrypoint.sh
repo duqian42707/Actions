@@ -9,7 +9,7 @@ for line in $INPUT_IMAGES
 do
     old_image=${line}
     img=${old_image#*/}
-    new_image="${INPUT_REGISTRY}/${INPUT_NAMESPACE}/img"
+    new_image="${INPUT_REGISTRY}/${INPUT_NAMESPACE}/${img}"
     echo "-------------[docker pull ${old_image}]-------------"
     docker pull "${old_image}"
     echo "-------------[docker tag ${old_image} ${new_image}]-------------"
