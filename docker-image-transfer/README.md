@@ -10,14 +10,14 @@ on:
       images:
         description: "docker image"
         required: true
-        default: "nginx:latest"
+        default: "docker.io/library/nginx:latest"
 jobs:
   k8s-image-sync:
     name: gcr.io image sync
     runs-on: ubuntu-latest
     steps:
     - name: sync
-      uses: duqian42707/actions/gcr-io-image-sync@main
+      uses: duqian42707/actions/docker-image-transfer@main
       with:
         images: ${{ github.event.inputs.images }}
         username: ${{ secrets.DOCKER_USERNAME }}

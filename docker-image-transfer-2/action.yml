@@ -1,0 +1,16 @@
+name: docker image transfer
+description: An action for docker image transfer
+author: duqian42707
+branding:
+  color: blue
+  icon: code
+inputs:
+  REGISTRY_SECRET:
+    description: 'REGISTRY_SECRET'
+    required: true
+  TRANSFER_RULE:
+    description: 'TRANSFER_RULE'
+    required: true
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
