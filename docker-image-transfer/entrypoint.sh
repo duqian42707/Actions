@@ -8,14 +8,8 @@ docker login -u ${INPUT_USERNAME} -p ${INPUT_PASSWORD} ${INPUT_REGISTRY}
 for line in $INPUT_IMAGES
 do
     old_image=${line}
-    IFS='/'
-    arr=(${line})
-    length=(${#arr[*]})
-    if [ $length -gt 2 ];then
-      new_image="${INPUT_REGISTRY}/${INPUT_NAMESPACE}/${arr[1]}.${arr[2]}"
-    else
-      new_image="${INPUT_REGISTRY}/${INPUT_NAMESPACE}/${arr[1]}"
-    fi
+    img=${old_image#*/}
+    new_image="${INPUT_REGISTRY}/${INPUT_NAMESPACE}/img"
     echo "-------------[docker pull ${old_image}]-------------"
     docker pull "${old_image}"
     echo "-------------[docker tag ${old_image} ${new_image}]-------------"
