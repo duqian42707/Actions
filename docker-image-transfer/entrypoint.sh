@@ -12,9 +12,9 @@ do
     arr=(${line})
     length=(${#arr[*]})
     if [ $length -gt 2 ];then
-      new_image="${INPUT_NAMESPACE}/${arr[1]}.${arr[2]}"
+      new_image="${INPUT_REGISTRY}/${INPUT_NAMESPACE}/${arr[1]}.${arr[2]}"
     else
-      new_image="${INPUT_NAMESPACE}/${arr[1]}"
+      new_image="${INPUT_REGISTRY}/${INPUT_NAMESPACE}/${arr[1]}"
     fi
     echo "-------------[docker pull ${old_image}]-------------"
     docker pull "${old_image}"
