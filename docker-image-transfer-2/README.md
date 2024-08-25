@@ -1,4 +1,4 @@
-# gcr.io images Sync
+# docker images Sync
 
 ## Usage
 
