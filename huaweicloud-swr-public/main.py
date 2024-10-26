@@ -14,6 +14,7 @@ repos = os.getenv("HUAWEI_CLOUD_SWR_REPOS")
 
 def send_request(repository):
     try:
+        repository = repository.replace("/", "$")
         request = UpdateRepoRequest(namespace, repository)
         request.body = UpdateRepoRequestBody(
             is_public=False
