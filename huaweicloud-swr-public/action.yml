@@ -1,0 +1,22 @@
+name: huaweicloud-swr-public
+description: An action for huaweicloud-swr-public
+author: duqian42707
+branding:
+  color: blue
+  icon: code
+inputs:
+  HUAWEI_CLOUD_SDK_AK:
+    description: 'HUAWEI_CLOUD_SDK_AK'
+    required: true
+  HUAWEI_CLOUD_SDK_SK:
+    description: 'HUAWEI_CLOUD_SDK_SK'
+    required: true
+  HUAWEI_CLOUD_SWR_NAMESPACE:
+    description: 'HUAWEI_CLOUD_SWR_NAMESPACE'
+    required: true
+  HUAWEI_CLOUD_SWR_REPOSITORY:
+    description: 'HUAWEI_CLOUD_SWR_REPOSITORY'
+    required: true
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
