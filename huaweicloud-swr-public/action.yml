@@ -17,8 +17,8 @@ inputs:
   HUAWEI_CLOUD_SWR_NAMESPACE:
     description: 'HUAWEI_CLOUD_SWR_NAMESPACE'
     required: true
-  HUAWEI_CLOUD_SWR_REPOSITORY:
-    description: 'HUAWEI_CLOUD_SWR_REPOSITORY'
+  HUAWEI_CLOUD_SWR_REPOS:
+    description: 'HUAWEI_CLOUD_SWR_REPOS'
     required: true
 runs:
   using: 'docker'
