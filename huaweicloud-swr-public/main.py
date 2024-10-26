@@ -17,7 +17,7 @@ def send_request(repository):
         repository = repository.replace("/", "$")
         request = UpdateRepoRequest(namespace, repository)
         request.body = UpdateRepoRequestBody(
-            is_public=False
+            is_public=True
         )
         response = client.update_repo(request)
         print(response)
