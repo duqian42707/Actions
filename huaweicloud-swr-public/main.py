@@ -11,6 +11,7 @@ if __name__ == "__main__":
     # In this example, AK and SK are stored in environment variables for authentication. Before running this example, set environment variables CLOUD_SDK_AK and CLOUD_SDK_SK in the local environment
     ak = os.getenv("HUAWEI_CLOUD_SDK_AK")
     sk = os.getenv("HUAWEI_CLOUD_SDK_SK")
+    region = os.getenv("HUAWEI_CLOUD_SWR_REGION")
     namespace = os.getenv("HUAWEI_CLOUD_SWR_NAMESPACE")
     repository = os.getenv("HUAWEI_CLOUD_SWR_REPOSITORY")
     repository = repository.replace("/", "$")
@@ -19,7 +20,7 @@ if __name__ == "__main__":
 
     client = SwrClient.new_builder() \
         .with_credentials(credentials) \
-        .with_region(SwrRegion.CN_NORTH_4) \
+        .with_region(SwrRegion.value_of(region)) \
         .build()
 
     try:
